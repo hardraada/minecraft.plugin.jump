@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hardraada</groupId>
-  <artifactId>minecraft.plugin.featherfall</artifactId>
+  <artifactId>minecraft.plugin.jump</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>minecraft.plugin.featherfall</name>
+  <name>minecraft.plugin.jump</name>
   <url>http://maven.apache.org</url>
 
   <properties>

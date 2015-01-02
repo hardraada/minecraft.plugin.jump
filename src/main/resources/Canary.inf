@@ -1,4 +1,4 @@
-main-class=com.hardraada.minecraft.plugin.featherfall.FeatherFallPlugin
-name=FeatherFall
+main-class=com.hardraada.minecraft.plugin.jump.JumpPlugin
+name=Jump
 author=hardraada1
 version=1.0
