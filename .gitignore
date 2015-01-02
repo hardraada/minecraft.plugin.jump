@@ -1,3 +1,6 @@
 target/classes/Canary.inf
 target/classes/com/hardraada/minecraft/plugin/featherfall/FeatherFallPlugin.class
 target/maven-archiver/pom.properties
+target/classes/com/hardraada/minecraft/plugin/jump/JumpLocation.class
+target/classes/com/hardraada/minecraft/plugin/jump/JumpLocation.class
+target/classes/com/hardraada/minecraft/plugin/jump/JumpPlugin.class
