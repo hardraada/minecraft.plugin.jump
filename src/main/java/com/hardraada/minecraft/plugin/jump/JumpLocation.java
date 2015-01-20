@@ -8,6 +8,9 @@ import net.canarymod.database.DataAccess;
 public class JumpLocation extends DataAccess {
 	@Column( columnName = "player_name", columnType = ColumnType.PRIMARY, dataType = DataType.STRING )
 	public String playerName;
+	
+	@Column( columnName = "world_name", columnType = ColumnType.PRIMARY, dataType = DataType.STRING )
+	public String worldName;
 
 	@Column( columnName = "location_name", columnType = ColumnType.PRIMARY, dataType = DataType.STRING )
 	public String locationName;

@@ -18,7 +18,7 @@ public class JumpPlugin extends PluginBase {
 	@Command(
 		aliases = { "jump" }, 
 		description = "Add, remove and jump to named locations.", 
-		permissions = { "" }, 
+		permissions = { "jump.allow" }, 
 		min = 2, 
 		toolTip = "/jump add|remove [name]; /jump [name]"
 	)
@@ -45,6 +45,7 @@ public class JumpPlugin extends PluginBase {
 	private void add( Player player, String name ) {
 		JumpLocation loc = new JumpLocation( );
 		loc.playerName = player.getName( );
+		loc.worldName = player.getWorld( ).getName( );
 		loc.locationName = name;
 		loc.x = player.getLocation( ).getX( );
 		loc.y = player.getLocation( ).getY( );
@@ -52,6 +53,7 @@ public class JumpPlugin extends PluginBase {
 		
 		Map<String, Object> search = new HashMap<String, Object>( );
 		search.put( "player_name", loc.playerName );
+		search.put( "world_name", loc.worldName );
 		search.put( "location_name", loc.locationName );
 		
 		try {
@@ -68,6 +70,7 @@ public class JumpPlugin extends PluginBase {
 		JumpLocation loc = new JumpLocation( );		
 		Map<String, Object> search = new HashMap<String, Object>( );
 		search.put( "player_name", player.getName( ) );
+		search.put( "world_name", player.getWorld( ).getName( ) );
 		search.put( "location_name", name );
 		
 		try {
@@ -102,7 +105,7 @@ public class JumpPlugin extends PluginBase {
 				if( !( da instanceof JumpLocation ) ) continue;
 				
 				loc = ( JumpLocation )da;
-				player.chat( loc.locationName );
+				player.chat( loc.locationName + " (" + loc.worldName + ")" );
 			}
 		} catch( DatabaseReadException e ) {
 			JumpPlugin.logger.error( e );
@@ -114,6 +117,7 @@ public class JumpPlugin extends PluginBase {
 		JumpLocation loc = new JumpLocation( );		
 		HashMap<String, Object> search = new HashMap<String, Object>( );
 		search.put( "player_name", player.getName( ) );
+		search.put( "world_name", player.getWorld( ).getName( ) );
 		search.put( "location_name", name );
 		
 		try {
