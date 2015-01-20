@@ -15,7 +15,7 @@ download that JAR directly from
 https://github.com/hardraada/minecraft.commons/blob/master/target/minecraft.commons-1.0.jar
 
 Permissions:
-None.
+jump.allow - to allow players access to manage jump points.
 
 Configuration:
 None.
